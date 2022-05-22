@@ -1,0 +1,36 @@
+<html>
+
+    <head>
+        <title>MP3 Downloader</title>
+    </head>
+
+    <style>
+
+        body {
+            background-color: blue;
+            color: #fff;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        h1 {
+            color: #55efc4;   
+        }
+
+    </style>
+
+    <body>
+        <h1>Youtube to MP3</h1>
+        <p>Created by: {{creator}}</p>
+
+        <form action="" method="POST">
+            <input type="text" name="URL" placeholder="URL">
+            <input type="submit" value="Submit">
+        
+            {# jinja syntax #}
+            {% if downloaded_file %}
+                <a href="{{ url_for('download', downloaded_file=downloaded_file) }}">I download naten to</a>
+            {% endif %}
+        </form>
+    </body>
+
+</html>
